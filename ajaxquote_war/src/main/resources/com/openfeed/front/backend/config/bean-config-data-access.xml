@@ -28,7 +28,7 @@
 	</bean>
 
 	<bean class="org.springframework.jndi.JndiObjectFactoryBean" id="dataSource">
-		<property name="jndiName" value="jdbc/openfeed" />
+		<property name="jndiName" value="jdbc/openfeedaq" />
 		<property name="resourceRef" value="true"/>
 	</bean>
 

@@ -4,6 +4,87 @@
 	<groupId>ajaxquote_jar</groupId>
 	<artifactId>ajaxquote_jar</artifactId>
 	<version>1.0-SNAPSHOT</version>
+	<profiles>
+		<profile>
+			<id>jpa20</id>
+			<activation>
+				<!-- activeByDefault>true</activeByDefault-->
+			</activation>
+			<dependencies>
+				<dependency>
+					<groupId>org.hibernate.javax.persistence</groupId>
+					<artifactId>hibernate-jpa-2.0-api</artifactId>
+					<version>1.0.1.Final</version>
+				</dependency>
+				<dependency>
+					<groupId>org.hibernate</groupId>
+					<artifactId>hibernate-core</artifactId>
+					<version>4.2.2.Final</version>
+				</dependency>
+				<dependency>
+					<groupId>org.hibernate</groupId>
+					<artifactId>hibernate-entitymanager</artifactId>
+					<version>4.2.2.Final</version>
+				</dependency>
+				<dependency>
+					<groupId>org.hibernate.common</groupId>
+					<artifactId>hibernate-commons-annotations</artifactId>
+					<version>4.0.2.Final</version>
+				</dependency>
+			</dependencies>
+		</profile>
+		<profile>
+			<id>jpa10</id>
+			<dependencies>
+				<dependency>
+					<groupId>org.hibernate</groupId>
+					<artifactId>ejb3-persistence</artifactId>
+					<version>1.0.2.GA</version>
+				</dependency>
+				<dependency>
+					<groupId>org.hibernate</groupId>
+					<artifactId>hibernate-core</artifactId>
+					<version>3.3.2.GA</version>
+				</dependency>
+				<dependency>
+					<groupId>org.hibernate</groupId>
+					<artifactId>hibernate-commons-annotations</artifactId>
+					<version>3.1.0.GA</version>
+				</dependency>
+				<dependency>
+					<groupId>org.hibernate</groupId>
+					<artifactId>hibernate-entitymanager</artifactId>
+					<version>3.4.0.GA</version>
+				</dependency>
+			</dependencies>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>1.7</version>
+						<executions>
+							<execution>
+								<phase>prepare-package</phase>
+								<configuration>
+									<target>
+										<move
+											file="${project.build.directory}/classes/META-INF/persistence.xml"
+											tofile="${project.build.directory}/classes/META-INF/persistence-2.0.xml" />
+										<move
+											file="${project.build.directory}/classes/META-INF/persistence-1.0.xml"
+											tofile="${project.build.directory}/classes/META-INF/persistence.xml" />
+									</target>
+								</configuration>
+								<goals>
+									<goal>run</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<resources>
@@ -26,7 +107,8 @@
 		</plugins>
 		<pluginManagement>
 			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>
@@ -99,9 +181,9 @@
 			<version>3.2.3.RELEASE</version>
 		</dependency>
 		<dependency>
-			<groupId>javax.persistence</groupId>
-			<artifactId>persistence-api</artifactId>
-			<version>1.0.2</version>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.4.2</version>
 		</dependency>
 	</dependencies>
 </project>

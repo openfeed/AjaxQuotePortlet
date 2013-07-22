@@ -15,7 +15,7 @@ public class SessionInterceptor extends HandlerInterceptorAdapter {
 
 	private Long defaultUserId;
 	UserService userService;
-	
+
 	@Autowired
 	public void setUserService(UserService userService) {
 		this.userService = userService;
@@ -25,26 +25,25 @@ public class SessionInterceptor extends HandlerInterceptorAdapter {
 	public void setDefaultUserId(Long defaultUserId) {
 		this.defaultUserId = defaultUserId;
 	}
-	
+
 	@Override
 	protected boolean preHandle(PortletRequest request,
 			PortletResponse response, Object handler) throws Exception {
-		//super.preHandle(request, response, handler);
-		
+		// super.preHandle(request, response, handler);
+
 		PortletSession session = request.getPortletSession(true);
-		if (session.getAttribute(IFrontOpenfeedContants.OPENFEED_USER, PortletSession.APPLICATION_SCOPE)==null){
+		if (session.getAttribute(IFrontOpenfeedContants.OPENFEED_USER,
+				PortletSession.APPLICATION_SCOPE) == null) {
 			String username = request.getRemoteUser();
 			User user = null;
-			if (username==null){
-				user = new User();
-				user.setUserId(defaultUserId);
-				user.setUserName("defaultuser");
-			}else{
-				user = userService.addUser(request.getRemoteUser());
+			if (username == null) {
+				username = "of_public_user";
 			}
-			session.setAttribute(IFrontOpenfeedContants.OPENFEED_USER, user,PortletSession.APPLICATION_SCOPE);
+			user = userService.addUser(username);
+			session.setAttribute(IFrontOpenfeedContants.OPENFEED_USER, user,
+					PortletSession.APPLICATION_SCOPE);
 		}
-		return true; 
+		return true;
 	}
 
 }
