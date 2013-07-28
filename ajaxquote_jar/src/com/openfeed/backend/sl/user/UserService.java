@@ -6,7 +6,7 @@ import java.util.List;
 import com.openfeed.backend.common.exceptions.DuplicateRecordException;
 import com.openfeed.backend.common.exceptions.RecordNotFoundException;
 import com.openfeed.backend.vo.user.User;
-import com.openfeed.backend.vo.user.UserMarketEntity;
+import com.openfeed.backend.vo.user.UserUIMarketEntity;
 
 public interface UserService {
 
@@ -16,13 +16,13 @@ public interface UserService {
 	
 	public User addUser(String username);
 	
-	public UserMarketEntity addUserMarketEntity(long userId, long entityId) throws DuplicateRecordException;
+	public UserUIMarketEntity addUserUIMarketEntity(long userUIId, long entityId) throws DuplicateRecordException;
 	
-	public List<UserMarketEntity> listUserMarketEntityByUser(long userId);
+	public List<UserUIMarketEntity> listUserUIMarketEntityByUserUIId(long userUIId);
 	
-	public UserMarketEntity addUserMarketEntity(long userId, String type, String symbol, String exchange,
+	public UserUIMarketEntity addUserUIMarketEntity(long userUIId, String type, String symbol, String exchange,
 			String companyName) throws DuplicateRecordException;
 	
-	public void removeUserMarketEntity(long userId, long entityId);
+	public void removeUserUIMarketEntity(long userUIId, long entityId);
 	
 }

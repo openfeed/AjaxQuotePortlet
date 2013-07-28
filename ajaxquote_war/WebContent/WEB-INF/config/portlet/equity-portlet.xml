@@ -7,7 +7,7 @@
     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 	<context:annotation-config />
-	<context:component-scan base-package="com.openfeed.front.controller.equity.stock" />
+	<context:component-scan base-package="com.openfeed.front.controller.equity" />
 
 	<bean
 		class="org.springframework.web.portlet.mvc.annotation.DefaultAnnotationHandlerMapping">
@@ -29,8 +29,8 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 
-	<bean id="defaultUserId" class="java.lang.Long">
-		<constructor-arg value="5"/>
+	<bean id="sessionUserParamName" class="java.lang.String">
+		<constructor-arg value="ajaxquote_user_param_name" />
 	</bean>
 
 </beans>

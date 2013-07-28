@@ -7,21 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-//import 
-
-/**
- * user
- * 
- * @version 	1.0
- * @author		DB2Java
- * 
- *  <p><b>Modification History</b><br>
- *  Date: Wed Mar 23 19:55:28 EDT 2011<br>
- *  Author: DB2Java<br>
- *  Comments: Original<br>
- */
 @Entity
-@Table(name="wdgt_user_table")
+@Table(name="wdgt_user")
 public class User {
  
 	/**

@@ -7,9 +7,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.openfeed.backend.common.exceptions.DuplicateRecordException;
 import com.openfeed.backend.common.exceptions.RecordNotFoundException;
-import com.openfeed.backend.vo.stocks.MarketEntity;
+import com.openfeed.backend.vo.equity.MarketEntity;
 import com.openfeed.backend.vo.user.User;
-import com.openfeed.backend.vo.user.UserMarketEntity;
+import com.openfeed.backend.vo.user.UserUIMarketEntity;
 
 @Service("userService")
 public class UserServiceImpl extends AbstractUserService {
@@ -32,9 +32,9 @@ public class UserServiceImpl extends AbstractUserService {
 
 	@Override
 	@Transactional
-	public UserMarketEntity addUserMarketEntity(long userId, long entityId)
+	public UserUIMarketEntity addUserUIMarketEntity(long userUIId, long entityId)
 			throws DuplicateRecordException {
-		return userMarketEntityDAO.insert(userId, entityId);
+		return userUIMarketEntityDAO.insert(userUIId, entityId);
 	}
 
 	@Override
@@ -48,14 +48,14 @@ public class UserServiceImpl extends AbstractUserService {
 	}
 
 	@Override
-	public List<UserMarketEntity> listUserMarketEntityByUser(long userId) {
+	public List<UserUIMarketEntity> listUserUIMarketEntityByUserUIId(long userUIId) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	@Transactional
-	public UserMarketEntity addUserMarketEntity(long userId, String type, String symbol,
+	public UserUIMarketEntity addUserUIMarketEntity(long userUIId, String type, String symbol,
 			String exchange, String companyName)
 			throws DuplicateRecordException {
 		MarketEntity marketEntity = null;
@@ -65,20 +65,20 @@ public class UserServiceImpl extends AbstractUserService {
 			// if record does not exist add MarketEntity
 			marketEntity = equityUIService.addMarketEntity(type, symbol, exchange, companyName);
 		}
-		UserMarketEntity userMarketEntity = null;
+		UserUIMarketEntity userMarketEntity = null;
 		try {
-			userMarketEntity = userMarketEntityDAO.select(userId, marketEntity.getEntityId());
+			userMarketEntity = userUIMarketEntityDAO.select(userUIId, marketEntity.getEntityId());
 		} catch (RecordNotFoundException e) {
-			userMarketEntity = userMarketEntityDAO.insert(userId, marketEntity.getEntityId());
+			userMarketEntity = userUIMarketEntityDAO.insert(userUIId, marketEntity.getEntityId());
 		}
 		return userMarketEntity;
 	}
 
 	@Override
 	@Transactional
-	public void removeUserMarketEntity(long userId, long entityId) {
-		userMarketEntityDAO.delete(userId, entityId);
-		List<UserMarketEntity> list = userMarketEntityDAO.selectByEntityId(entityId);
+	public void removeUserUIMarketEntity(long userUIId, long entityId) {
+		userUIMarketEntityDAO.delete(userUIId, entityId);
+		List<UserUIMarketEntity> list = userUIMarketEntityDAO.selectByEntityId(entityId);
 		if (list.isEmpty()){
 			try {
 				equityUIService.removeMarketEntity(entityId);

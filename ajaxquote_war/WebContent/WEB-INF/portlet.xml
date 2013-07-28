@@ -18,7 +18,61 @@
 		</supports>
 		<resource-bundle>messages</resource-bundle>	
 		<portlet-info>
-			<title>Equity Portlet</title>
+			<title>AjaxQuote Portlet</title>
+		</portlet-info>
+	</portlet>
+
+	<portlet>
+		<portlet-name>eplt-anonymous</portlet-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/config/portlet/equity-anonymous-portlet.xml</value>
+		</init-param>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>edit</portlet-mode>
+		</supports>
+		<resource-bundle>messages</resource-bundle>	
+		<portlet-info>
+			<title>Ajaxquote Anonymous Portlet</title>
+		</portlet-info>
+	</portlet>
+
+	<portlet>
+		<portlet-name>eplt-mini</portlet-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/config/portlet/equity-mini-portlet.xml</value>
+		</init-param>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>edit</portlet-mode>
+		</supports>
+		<resource-bundle>messages</resource-bundle>	
+		<portlet-info>
+			<title>Ajaxquote Mini Portlet</title>
+		</portlet-info>
+	</portlet>
+
+	<portlet>
+		<portlet-name>eplt-mini-anonymous</portlet-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/config/portlet/equity-mini-anonymous-portlet.xml</value>
+		</init-param>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>edit</portlet-mode>
+		</supports>
+		<resource-bundle>messages</resource-bundle>	
+		<portlet-info>
+			<title>Ajaxquote Mini Anonymous Portlet</title>
 		</portlet-info>
 	</portlet>
 

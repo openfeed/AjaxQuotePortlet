@@ -2,11 +2,10 @@ package com.openfeed.backend.sl.equity;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.openfeed.backend.dao.currency.CurrencyMarketDAO;
-import com.openfeed.backend.dao.marketentity.CompaniesDAO;
+import com.openfeed.backend.dao.marketentity.EquityEntityDAO;
 import com.openfeed.backend.dao.marketentity.MarketEntityDAO;
-import com.openfeed.backend.dao.user.UserMarketEntityDAO;
-import com.openfeed.backend.dao.widget.WidgetEntityDAO;
+import com.openfeed.backend.dao.user.UserUIMarketEntityDAO;
+import com.openfeed.backend.dao.userui.UserUIDAO;
 
 
 
@@ -14,37 +13,33 @@ public abstract class AbstractEquityUIService implements EquityUIService {
 	
 	protected MarketEntityDAO marketEntityDAO;
 	
-	protected CompaniesDAO companiesDAO;
+	protected EquityEntityDAO equityEntityDAO;
 	
-	protected CurrencyMarketDAO currencyMarketDAO;
+	protected UserUIDAO userUIDAO;
 	
-	protected WidgetEntityDAO widgetEntityDAO;
-	
-	protected UserMarketEntityDAO userMarketEntityDAO;
+	protected UserUIMarketEntityDAO userUIMarketEntityDAO;
 
 	@Autowired
-	public void setMarketEntityDAO(MarketEntityDAO stockDAO) {
-		this.marketEntityDAO = stockDAO;
+	public void setMarketEntityDAO(MarketEntityDAO marketEntityDAO) {
+		this.marketEntityDAO = marketEntityDAO;
 	}
 
 	@Autowired
-	public void setCompaniesDAO(CompaniesDAO companiesDAO) {
-		this.companiesDAO = companiesDAO;
-	}
-
-	//@Autowired
-	public void setCurrencyMarketDAO(CurrencyMarketDAO currencyMarketDAO) {
-		this.currencyMarketDAO = currencyMarketDAO;
+	public void setEquityEntityDAO(EquityEntityDAO equityEntityDAO) {
+		this.equityEntityDAO = equityEntityDAO;
 	}
 
 	@Autowired
-	public void setWidgetEntityDAO(WidgetEntityDAO widgetEntityDAO) {
-		this.widgetEntityDAO = widgetEntityDAO;
+	public void setUserUIDAO(UserUIDAO userUIDAO) {
+		this.userUIDAO = userUIDAO;
 	}
 
-	public void setUserMarketEntityDAO(UserMarketEntityDAO userMarketEntityDAO) {
-		this.userMarketEntityDAO = userMarketEntityDAO;
+	@Autowired
+	public void setUserUIMarketEntityDAO(UserUIMarketEntityDAO userUIMarketEntityDAO) {
+		this.userUIMarketEntityDAO = userUIMarketEntityDAO;
 	}
+
+	
 	
 	
 }

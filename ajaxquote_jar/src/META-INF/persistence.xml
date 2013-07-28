@@ -5,12 +5,11 @@
 
 	<persistence-unit name="ajaxquotedata">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
-		<class>com.openfeed.backend.vo.stocks.Companies</class>
-		<class>com.openfeed.backend.vo.stocks.MarketEntity</class>
+		<class>com.openfeed.backend.vo.equity.EquityEntity</class>
+		<class>com.openfeed.backend.vo.equity.MarketEntity</class>
 		<class>com.openfeed.backend.vo.user.User</class>
-		<class>com.openfeed.backend.vo.user.UserMarketEntity</class>
-		<class>com.openfeed.backend.vo.widget.WidgetEntity</class>
-		<class>com.openfeed.backend.vo.stocks.EquityEntity</class>
+		<class>com.openfeed.backend.vo.user.UserUIMarketEntity</class>
+		<class>com.openfeed.backend.vo.userui.UserUI</class>
 		<properties>
 			<!-- property name="hibernate.hbm2ddl.auto" value="validate" /> -->
 			<property name="hibernate.show_sql" value="false" />

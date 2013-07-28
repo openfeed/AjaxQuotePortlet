@@ -351,6 +351,7 @@
 										<include>${project.build.directory}/${project.build.finalName}/resources/js/jquery-min.js</include>
 										<include>${project.build.directory}/${project.build.finalName}/resources/js/jquery-ui-min.js</include>
 										<include>${project.build.directory}/${project.build.finalName}/resources/js/jquery.dataTables-min.js</include>
+										<include>${project.build.directory}/${project.build.finalName}/resources/js/ajaxquote-custom-min.js</include>
 									</includes>
 								</aggregation>
 								<!-- CSS aggregations -->

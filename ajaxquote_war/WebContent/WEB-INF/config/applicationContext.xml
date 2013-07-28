@@ -14,7 +14,6 @@
 
 
 	<import resource="classpath:com/openfeed/front/backend/config/bean-config-data-access.xml" />
-	<import resource="classpath:com/openfeed/front/backend/config/bean-configuration-common.xml" />
 	<import resource="classpath:com/openfeed/front/backend/config/bean-configuration-dao.xml" />
 	<import resource="classpath:com/openfeed/front/backend/config/bean-configuration-service.xml" />
 	
@@ -30,8 +29,4 @@
 		</property>
 	</bean>
 
-	<bean id="defaultUserId" class="java.lang.Long">
-		<constructor-arg value="5"/>
-	</bean>
-	
 </beans>

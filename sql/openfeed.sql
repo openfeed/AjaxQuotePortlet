@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 14, 2013 at 02:51 PM
+-- Generation Time: Jul 27, 2013 at 10:26 PM
 -- Server version: 5.5.24-log
 -- PHP Version: 5.4.3
 
@@ -40,6 +40,8 @@ CREATE TABLE IF NOT EXISTS `equity_entity` (
 --
 
 INSERT INTO `equity_entity` (`symbol`, `exchange`, `company_name`, `industry`) VALUES
+('.DJI', 'INDEXDJX', 'Dow Jones Industrial Average', 'All'),
+('.INX', 'INDEXSP', 'S&P 500', 'All'),
 ('A', 'NYSE', 'Agilent Technologies', 'Information Technology'),
 ('AA', 'NYSE', 'Alcoa', 'Materials'),
 ('AAPL', 'NASDAQ', 'Apple', 'Information Technology'),
@@ -553,46 +555,63 @@ CREATE TABLE IF NOT EXISTS `wdgt_market_entity` (
   PRIMARY KEY (`entity_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
+--
+-- Table structure for table `wdgt_market_entity`
+--
+DROP TABLE IF EXISTS `wdgt_market_entity`;
+INSERT INTO `wdgt_market_entity` (`entity_id`, `type`, `symbol`, `exchange`, `company_name`) VALUES
+(40, 'EQTY', 'AMP', 'NYSE', 'Ameriprise Financial'),
+(41, 'EQTY', 'BNI', 'NYSE', 'Burlington Northern Santa Fe'),
+(42, 'EQTY', 'BMY', 'NYSE', 'Bristol Myers Squibb'),
+(43, 'EQTY', '.DJI', 'INDEXDJX', 'Dow Jones Industrial Average'),
+(44, 'EQTY', '.INX', 'INDEXSP', 'S&P 500'),
+(45, 'EQTY', 'BEN', 'NYSE', 'Franklin Resources'),
+(46, 'EQTY', 'AMZN', 'NASDAQ', 'Amazon.com'),
+(47, 'EQTY', 'AEP', 'NYSE', 'American Electric Power');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wdgt_user_market_entity`
+-- Table structure for table `wdgt_user`
 --
-
-DROP TABLE IF EXISTS `wdgt_user_market_entity`;
-CREATE TABLE IF NOT EXISTS `wdgt_user_market_entity` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `user_id` bigint(20) DEFAULT NULL,
-  `entity_id` bigint(20) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `wdgt_user_table`
---
-
-DROP TABLE IF EXISTS `wdgt_user_table`;
-CREATE TABLE IF NOT EXISTS `wdgt_user_table` (
+DROP TABLE IF EXISTS `wdgt_user`;
+CREATE TABLE IF NOT EXISTS `wdgt_user` (
   `user_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `user_name` varchar(25) DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
+
+
+
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `widget_entity`
+-- Table structure for table `wdgt_user_ui`
 --
-
-DROP TABLE IF EXISTS `widget_entity`;
-CREATE TABLE IF NOT EXISTS `widget_entity` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+DROP TABLE IF EXISTS `wdgt_user_ui`;
+CREATE TABLE IF NOT EXISTS `wdgt_user_ui` (
+  `user_ui_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `user_id` bigint(20) DEFAULT NULL,
   `ui_id` varchar(250) DEFAULT NULL,
+  PRIMARY KEY (`user_ui_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=112 ;
+
+
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `wdgt_user_ui_market_entity`
+--
+
+CREATE TABLE IF NOT EXISTS `wdgt_user_ui_market_entity` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `user_ui_id` bigint(20) DEFAULT NULL,
+  `entity_id` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=56 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

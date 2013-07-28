@@ -4,10 +4,24 @@
 <liferay-portlet-app>
 	<portlet>
 		<portlet-name>eplt</portlet-name>
-		<icon>/icon.png</icon>
+		<instanceable>true</instanceable>
+	</portlet>
+
+	<portlet>
+		<portlet-name>eplt-anonymous</portlet-name>
+		<instanceable>true</instanceable>
+	</portlet>
+
+	<portlet>
+		<portlet-name>eplt-mini</portlet-name>
 		<instanceable>true</instanceable>
 	</portlet>
 	
+	<portlet>
+		<portlet-name>eplt-mini-anonymous</portlet-name>
+		<instanceable>true</instanceable>
+	</portlet>	
+
 	<role-mapper>
 		<role-name>administrator</role-name>
 		<role-link>Administrator</role-link>

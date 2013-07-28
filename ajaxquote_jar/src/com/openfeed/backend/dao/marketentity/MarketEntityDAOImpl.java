@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import com.openfeed.backend.common.exceptions.DuplicateRecordException;
 import com.openfeed.backend.common.exceptions.RecordNotFoundException;
-import com.openfeed.backend.vo.stocks.MarketEntity;
+import com.openfeed.backend.vo.equity.MarketEntity;
 
 /**
  * DAO Implementation class

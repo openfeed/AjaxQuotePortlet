@@ -2,7 +2,10 @@
 <!DOCTYPE display PUBLIC "-//Liferay//DTD Display 6.0.0//EN" "http://www.liferay.com/dtd/liferay-display_6_0_0.dtd">
 
 <display>
-	<category name="Googlefeed Portlets">
+	<category name="AjaxQuote Portlets">
 		<portlet id="eplt" />
+		<portlet id="eplt-anonymous" />
+		<portlet id="eplt-mini" />
+		<portlet id="eplt-mini-anonymous" />
 	</category>
 </display>
