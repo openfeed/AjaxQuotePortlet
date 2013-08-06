@@ -12,7 +12,7 @@ If you are using eclipse; in order to get rid of IDE errors in the jar project y
 
 Vanilla WebSphere Application Server test portal harness can be configured by uncommenting the PortalEquitiesServlet servlet in the web.xml
 
-When deploying on Liferay
+When deploying on LifeRay
 After deployment to liferay "liferay-portal-6.1.1-ce-ga2\tomcat-7.0.27\webapps\ajaxquote_war\WEB-INF\web.xml" must be edited. Listeners supposed be in the right sequence:
 
 <code>
