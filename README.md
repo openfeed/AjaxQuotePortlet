@@ -3,7 +3,9 @@ AjaxQuotePlugin
 New in v0.92 is the maven build option for creating a JPA 1.0 or 2.0 persistence xml and the corresponding JPA Hibernate provider classes version 3.3.2.GA (JPA 1.0) or 4.2.2.Final (JPA 2.0).
 
 Run the following maven profile commands for either build:
+<br>
 1. mvn -P jpa10 clean install (build for IBM WebSphere Portal 7)
+<br>
 2. mvn -P jpa20 clean install (build for LifeRay and IBM WebSphere Portal 8)
 
 If you are using eclipse; in order to get rid of IDE errors in the jar project you will have to uncomment this line <!-- activeByDefault>true</activeByDefault--> in the backend jar pom.
