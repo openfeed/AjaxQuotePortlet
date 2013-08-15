@@ -1,5 +1,9 @@
-AjaxQuotePortlet
+AjaxQuote Portlet
 ================
+
+A update the great LifeRay Stock Plugin Portlet
+
+
 New in v0.93 is the maven build option for creating a JPA 1.0 or 2.0 persistence xml and the corresponding JPA Hibernate provider classes version 3.3.2.GA (JPA 1.0) or 4.2.2.Final (JPA 2.0).
 
 Run the following maven profile commands for either build:
