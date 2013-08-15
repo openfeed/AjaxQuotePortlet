@@ -34,6 +34,35 @@
 			</dependencies>
 		</profile>
 		<profile>
+			<id>mysql</id>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>1.7</version>
+						<executions>
+							<execution>
+								<phase>prepare-package</phase>
+								<configuration>
+									<target>
+										<move
+											file="${project.build.directory}/classes/META-INF/persistence.xml"
+											tofile="${project.build.directory}/classes/META-INF/persistence-2.0.xml" />
+										<move
+											file="${project.build.directory}/classes/META-INF/persistence-2.0-mysql.xml"
+											tofile="${project.build.directory}/classes/META-INF/persistence.xml" />
+									</target>
+								</configuration>
+								<goals>
+									<goal>run</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
 			<id>jpa10</id>
 			<dependencies>
 				<dependency>
