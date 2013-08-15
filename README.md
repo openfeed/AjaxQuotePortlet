@@ -64,8 +64,8 @@ https://github.com/openfeed/AjaxQuotePortlet/tree/master/liferay_6.1_GA2_post_de
 Eclipse M2E Instructions
 ========================
 
-If you are using eclipse; in order to get rid of IDE errors in the jar project you will have to uncomment this line in the backend jar pom to indicate:
-<code> <!-- activeByDefault>true</activeByDefault--> </code> 
+If you are using eclipse; in order to get rid of IDE errors in the jar project you will have to uncomment this line in the backend jar pom to indicate true:
+<code><activeByDefault>true</activeByDefault></code> 
 <br>
 <br>
 Located:
@@ -82,7 +82,7 @@ TRUNCATE TABLE wdgt_user_ui_market_entity;<br>
 
 WebSphere Application Server (Embedded Portal)
 ============================
-Vanilla WebSphere Application Server test portal harness support can be configured in the web.xml. Make sure that before you run a maven build you edit <code>"\ajaxquote_war\WebContent\WEB-INF\web.xml"</code> by uncommenting the PortalEquitiesServlet servlet xml instructions.
+Vanilla WebSphere Application Server test portal harness support can be configured in the web.xml. Make sure that before you run a maven build you edit <code>\ajaxquote_war\WebContent\WEB-INF\web.xml</code> by uncommenting the PortalEquitiesServlet servlet xml instructions.
 
 	<servlet>
 		<servlet-name>PortalEquitiesServlet</servlet-name>
