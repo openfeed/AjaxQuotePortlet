@@ -81,6 +81,8 @@ When deploying to WAS. Make sure that before you run a maven build you edit "aja
  </code>
 remove these comments.
 
+<code>
 TRUNCATE TABLE wdgt_user;
 TRUNCATE TABLE wdgt_user_ui;
 TRUNCATE TABLE wdgt_user_ui_market_entity;
+</code>
