@@ -72,6 +72,14 @@ Located:
 
 https://github.com/openfeed/AjaxQuotePortlet/blob/master/ajaxquote_jar/pom.xml
 
+Miscellaneous
+==============
+<code>
+TRUNCATE TABLE wdgt_user;<br>
+TRUNCATE TABLE wdgt_user_ui;<br>
+TRUNCATE TABLE wdgt_user_ui_market_entity;<br>
+</code>
+
 WebSphere Application Server (Embedded Portal)
 ============================
 Vanilla WebSphere Application Server test portal harness support can be configured in the web.xml. Make sure that before you run a maven build you edit <code>"\ajaxquote_war\WebContent\WEB-INF\web.xml"</code> by uncommenting the PortalEquitiesServlet servlet xml instructions.
@@ -86,9 +94,3 @@ Vanilla WebSphere Application Server test portal harness support can be configur
 		<servlet-name>PortalEquitiesServlet</servlet-name>
 		<url-pattern>/portale/*</url-pattern>
 	</servlet-mapping>
-
-<code>
-TRUNCATE TABLE wdgt_user;
-TRUNCATE TABLE wdgt_user_ui;
-TRUNCATE TABLE wdgt_user_ui_market_entity;
-</code>
