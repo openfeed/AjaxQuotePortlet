@@ -1,0 +1,1 @@
+http://issues.liferay.com/browse/LPS-29103
