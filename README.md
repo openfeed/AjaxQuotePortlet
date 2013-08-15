@@ -1,5 +1,5 @@
 AjaxQuote Portlet
-================
+=================
 
 A update the great LifeRay Stock Plugin Portlet!
 
@@ -12,16 +12,23 @@ Multiple Instance Portlets on the same page
 Support JPA 1.0 and 2.0 persistance units and hibernate libraries with maven profile build switches
 
 
-Run the following maven profile commands for either build:
+Build Instructions
+==================
 <br>
 IBM WebSphere Portal 7.0
 <br>
 mvn -P jpa10 clean install
 <br>
-IBM WebSphere Portal 8.0 and all fLifeRay 
+IBM WebSphere Portal 8.0 and all Tomcat LifeRay bundle: 
 <br>
-2. mvn -P jpa20 clean install (build for LifeRay and IBM WebSphere Portal 8)
+mvn -P jpa20 clean install
+<br>
+JBOSS LifeRay bundle:
+<br>
+mvn clean install -P jpa20,mysql
 
+Eclipse Instructions
+====================
 If you are using eclipse; in order to get rid of IDE errors in the jar project you will have to uncomment this line <!-- activeByDefault>true</activeByDefault--> in the backend jar pom.
 
 Vanilla WebSphere Application Server test portal harness can be configured by uncommenting the PortalEquitiesServlet servlet in the web.xml
