@@ -15,18 +15,26 @@ Support JPA 1.0 and 2.0 persistance units and hibernate libraries with maven pro
 Build Instructions
 ==================
 
-IBM WebSphere Portal 7.0
+The project POM build scripts support several maven profiles which creates builds targeted for several portal runtimes (based on the JPA persistence unit 1.0 or 2.0 and the corresponding hiberante libraries).
+<br>
+IBM WebSphere Portal 7.0:
 <br>
 <code>mvn clean install -P jpa10</code>
 <br>
-IBM WebSphere Portal 8.0 and all Tomcat LifeRay bundle: 
+IBM WebSphere Portal 8.0 and LifeRay Tomcat bundle: 
 <br>
 <code>mvn clean install -P jpa20</code>
 <br>
-JBOSS LifeRay bundle (MySQL):
+LifeRay JBOSS bundle (MySQL):
 <br>
 <code>mvn clean install -P jpa20,mysql</code>
 
+Install Instructions
+==================
+1. Download a tagged build or build from source the war based on the targeted runtime desired
+2. Create a database schema (e.g. OPENFEEDAQ)
+3. Prepare the application server JNDI datasource connection (jdbc/openfeedaq) for IBM Portal (WAS jdbc resource) or either LiferRay bundle of Tomcat (context.xml) or JBOSS (MySQL module)
+4. 
 
 Eclipse M2E Instructions
 ========================
