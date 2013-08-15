@@ -66,12 +66,11 @@ Eclipse M2E Instructions
 
 If you are using eclipse; in order to get rid of IDE errors in the jar project you will have to uncomment this line in the backend jar pom to indicate true:
 
-<activeByDefault>true</activeByDefault>
- 
-<br>
-<br>
-Located:
+	<activeByDefault>
+	true
+	</activeByDefault>
 
+<br>
 https://github.com/openfeed/AjaxQuotePortlet/blob/master/ajaxquote_jar/pom.xml
 
 Miscellaneous
