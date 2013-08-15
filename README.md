@@ -51,15 +51,13 @@ LifeRay 6.1 GA2 Support
 LifeRay 6.1 GA2 has a issue with (LPS-29103) the deployment manager moving the Spring context listner directive deep down in the bottom of the post deployed web.xml. Use the following web.xml script post deployment for the portlet to function:
 <br>
 https://github.com/openfeed/AjaxQuotePortlet/tree/master/liferay_6.1_GA2_post_deployment_fix
-<br>
+
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
-	<br>
 	<listener>
 		<listener-class>com.liferay.portal.kernel.servlet.PluginContextListener</listener-class>
 	</listener>
-	<br>
 	<listener>
 		<listener-class>com.liferay.portal.kernel.servlet.SerializableSessionAttributeListener</listener-class>
 	</listener>
@@ -84,7 +82,5 @@ When deploying to WAS. Make sure that before you run a maven build you edit "aja
 remove these comments.
 
 TRUNCATE TABLE wdgt_user;
-<br>
 TRUNCATE TABLE wdgt_user_ui;
-<br>
 TRUNCATE TABLE wdgt_user_ui_market_entity;
