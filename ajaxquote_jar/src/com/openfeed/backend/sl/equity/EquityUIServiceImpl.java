@@ -20,6 +20,7 @@ import com.openfeed.backend.vo.userui.UserUI;
 @Service("equityUIService")
 public class EquityUIServiceImpl extends AbstractEquityUIService {
 
+	@Transactional
 	public List<MarketEntity> getEquitiesByUserUIId(long uiId) {
 		List<Long> list = userUIMarketEntityDAO.selectEntityIdByUserUIId(uiId);
 		return marketEntityDAO.listByTypeUserId(
@@ -42,7 +43,7 @@ public class EquityUIServiceImpl extends AbstractEquityUIService {
 		return stock;
 	}
 
-	@Override
+	@Transactional
 	public List<EquityEntity> searchEquity(String symbol) {
 		return equityEntityDAO.searchEntity(symbol);
 	}
