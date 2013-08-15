@@ -17,13 +17,13 @@ Build Instructions
 
 IBM WebSphere Portal 7.0
 <br>
-<code>mvn -P jpa10 clean install</code>
+<code>mvn clean install -P jpa10</code>
 <br>
 IBM WebSphere Portal 8.0 and all Tomcat LifeRay bundle: 
 <br>
-<code>mvn -P jpa20 clean install</code>
+<code>mvn clean install -P jpa20</code>
 <br>
-JBOSS LifeRay bundle:
+JBOSS LifeRay bundle (MySQL):
 <br>
 <code>mvn clean install -P jpa20,mysql</code>
 
@@ -38,6 +38,11 @@ If you are using eclipse; in order to get rid of IDE errors in the jar project y
 Located:
 
 https://github.com/openfeed/AjaxQuotePortlet/blob/master/ajaxquote_jar/pom.xml
+
+Database Instructions
+========================
+Initial SQL scripts are provided to load the popular company and market symbols for key stroke ahead find company functionality; into the openfeed schema. 
+https://github.com/openfeed/AjaxQuotePortlet/tree/master/sql
 
 
 
