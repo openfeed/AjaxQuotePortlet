@@ -10,12 +10,13 @@ Quote data is updated on the page in real-time
 Support Annoymous and Personalized portlets with different portfolios
 Multiple Instance Portlets on the same page
 Support JPA 1.0 and 2.0 persistance units and hibernate libraries with maven profile build switches
-
+There are four portlets to choose from 
 
 Build Instructions
 ==================
 
-The project POM build scripts support several maven profiles which creates builds targeted for several portal runtimes (based on the JPA persistence unit 1.0 or 2.0 and the corresponding hiberante libraries).
+The project POM build scripts support several maven profiles which creates builds targeted for several portal runtimes (based on the JPA persistence unit 1.0 or 2.0 and the corresponding hibernate libraries).
+<br>
 <br>
 IBM WebSphere Portal 7.0:
 <br>
@@ -32,27 +33,17 @@ LifeRay JBOSS bundle (MySQL):
 Install Instructions
 ==================
 1. Download a tagged build or build from source the war based on the targeted runtime desired
-2. Create a database schema (e.g. OPENFEEDAQ)
-3. Prepare the application server JNDI datasource connection (jdbc/openfeedaq) for IBM Portal (WAS jdbc resource) or either LiferRay bundle of Tomcat (context.xml) or JBOSS (MySQL module)
-4. 
-
-Eclipse M2E Instructions
-========================
-
-If you are using eclipse; in order to get rid of IDE errors in the jar project you will have to uncomment this line in the backend jar pom to indicate:
-<code> <!-- activeByDefault>true</activeByDefault--> </code> 
+2. Create a database schema (e.g. <code>OPENFEEDAQ</code>)
+3. Prepare the application server JNDI datasource connection (<code>jdbc/openfeedaq</code>) for IBM Portal (WAS jdbc resource) or either LiferRay bundle of Tomcat (context.xml) or JBOSS (MySQL module)
+4. Deploy to either LifeRay Portal bundle or IBM WebSphere Portal servers
+5. Place one or more AjaxQuote portlets on either logged in pages or anonymous pages using the corresponding AjaqQuote portlet types (anonymous, miniature)
 <br>
-<br>
-Located:
-
-https://github.com/openfeed/AjaxQuotePortlet/blob/master/ajaxquote_jar/pom.xml
 
 Database Instructions
 ========================
 Initial SQL scripts are provided to load the popular company and market symbols for key stroke ahead find company functionality; into the openfeed schema.
 <br>
 https://github.com/openfeed/AjaxQuotePortlet/tree/master/sql
-
 
 LifeRay 6.1 GA2 Support
 =======================
@@ -69,6 +60,17 @@ https://github.com/openfeed/AjaxQuotePortlet/tree/master/liferay_6.1_GA2_post_de
 	<listener>
 		<listener-class>com.liferay.portal.kernel.servlet.SerializableSessionAttributeListener</listener-class>
 	</listener>
+	
+Eclipse M2E Instructions
+========================
+
+If you are using eclipse; in order to get rid of IDE errors in the jar project you will have to uncomment this line in the backend jar pom to indicate:
+<code> <!-- activeByDefault>true</activeByDefault--> </code> 
+<br>
+<br>
+Located:
+
+https://github.com/openfeed/AjaxQuotePortlet/blob/master/ajaxquote_jar/pom.xml
 
 WebSphere Application Server (Embedded Portal)
 ============================
