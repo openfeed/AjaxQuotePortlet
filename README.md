@@ -14,7 +14,7 @@ Support JPA 1.0 and 2.0 persistance units and hibernate libraries with maven pro
 
 Build Instructions
 ==================
-<br>
+
 IBM WebSphere Portal 7.0
 <br>
 <code>mvn -P jpa10 clean install</code>
@@ -27,9 +27,20 @@ JBOSS LifeRay bundle:
 <br>
 <code>mvn clean install -P jpa20,mysql</code>
 
-Eclipse Instructions
-====================
-If you are using eclipse; in order to get rid of IDE errors in the jar project you will have to uncomment this line <!-- activeByDefault>true</activeByDefault--> in the backend jar pom.
+
+Eclipse M2E Instructions
+========================
+
+If you are using eclipse; in order to get rid of IDE errors in the jar project you will have to uncomment this line in the backend jar pom to indicate:
+
+<br>
+<code><!-- activeByDefault>true</activeByDefault--></code> 
+<br>
+Located:
+<br>
+https://github.com/openfeed/AjaxQuotePortlet/blob/master/ajaxquote_jar/pom.xml
+
+
 
 Vanilla WebSphere Application Server test portal harness can be configured by uncommenting the PortalEquitiesServlet servlet in the web.xml
 
