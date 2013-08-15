@@ -21,11 +21,11 @@ IBM WebSphere Portal 7.0
 <br>
 IBM WebSphere Portal 8.0 and all Tomcat LifeRay bundle: 
 <br>
-mvn -P jpa20 clean install
+<code>mvn -P jpa20 clean install</code>
 <br>
 JBOSS LifeRay bundle:
 <br>
-mvn clean install -P jpa20,mysql
+<code>mvn clean install -P jpa20,mysql</code>
 
 Eclipse Instructions
 ====================
