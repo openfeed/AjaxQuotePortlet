@@ -7,20 +7,32 @@
 <script>
 (function(){
 	$(document).ready(function() {
-		var dataTable = $('#<portlet:namespace/>stock_table').dataTable( {
+		var of_<portlet:namespace/> = (window.of_<portlet:namespace/> = (window.of_<portlet:namespace/> || new of_ajaxquote('<portlet:namespace/>',"googleScriptId","scriptContainer",'<c:out value="${stocks}" />'))),
+			dataTable = $('#<portlet:namespace/>stock_table').dataTable( {
 			"bJQueryUI": false,
 			"bProcessing": false,
 			"bJQueryUI":true,
-			"bStateSave": true
+			"bStateSave": true,
+			"aoColumns": [
+            	{ "mData": "t" },
+            	{ "mData": "e" },
+            	{ "mData": "l" },
+            	{ "mData": "l_cur" },
+            	{ "mData": "c","sClass":"pr" },
+            	{ "mData": "cp","sClass":"pr" },
+            	{ "mData": "ltt" },
+            	{ "mData": "lt" } ],
+            "fnRowCallback":of_<portlet:namespace/>.rowCallback
 		} );
-		var of_<portlet:namespace/> = (window.of_<portlet:namespace/> = (window.of_<portlet:namespace/> || new of_ajaxquote('<portlet:namespace/>',"googleScriptId","scriptContainer",'<c:out value="${stocks}" />',dataTable,true)));
+		of_<portlet:namespace/>.setTable(dataTable);
 		of_<portlet:namespace/>.ajaxUpdateTable();
+		$('#<portlet:namespace/>stock_table').removeClass("hidden");
 		setInterval( 'of_<portlet:namespace/>.ajaxUpdateTable()', 5000 );
 	});
 })();
 </script>
 <div id="<portlet:namespace/>scriptContainer"></div>
-<table id="<portlet:namespace/>stock_table" cellpadding="0" cellspacing="0" border="0" class="display">
+<table id="<portlet:namespace/>stock_table" cellpadding="0" cellspacing="0" border="0" class="hidden">
 	<thead>
 		<tr>
 			<th>Ticker</th>
