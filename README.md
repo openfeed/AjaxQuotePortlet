@@ -5,13 +5,20 @@ A update the great LifeRay Stock Plugin Portlet!
 
 Real-time market quote data is streamed to one or more portlets on the page by Ajax and JavaScript technology. Watch the tickers move in real-time on the screen (with no stress on the back-end; all client side services)
 
+Features:
+Quote data is updated on the page in real-time
+Support Annoymous and Personalized portlets with different portfolios
+Multiple Instance Portlets on the same page
+Support JPA 1.0 and 2.0 persistance units and hibernate libraries with maven profile build switches
 
-
-New in v0.93 is the maven build option for creating a JPA 1.0 or 2.0 persistence xml and the corresponding JPA Hibernate provider classes version 3.3.2.GA (JPA 1.0) or 4.2.2.Final (JPA 2.0).
 
 Run the following maven profile commands for either build:
 <br>
-1. mvn -P jpa10 clean install (build for IBM WebSphere Portal 7)
+IBM WebSphere Portal 7.0
+<br>
+mvn -P jpa10 clean install
+<br>
+IBM WebSphere Portal 8.0 and all fLifeRay 
 <br>
 2. mvn -P jpa20 clean install (build for LifeRay and IBM WebSphere Portal 8)
 
