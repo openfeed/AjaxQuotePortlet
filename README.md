@@ -17,7 +17,7 @@ Build Instructions
 <br>
 IBM WebSphere Portal 7.0
 <br>
-mvn -P jpa10 clean install
+<code>mvn -P jpa10 clean install</code>
 <br>
 IBM WebSphere Portal 8.0 and all Tomcat LifeRay bundle: 
 <br>
