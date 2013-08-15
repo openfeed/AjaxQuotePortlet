@@ -65,7 +65,9 @@ Eclipse M2E Instructions
 ========================
 
 If you are using eclipse; in order to get rid of IDE errors in the jar project you will have to uncomment this line in the backend jar pom to indicate true:
-<code><activeByDefault>true</activeByDefault></code> 
+
+<activeByDefault>true</activeByDefault>
+ 
 <br>
 <br>
 Located:
