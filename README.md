@@ -53,7 +53,7 @@ LifeRay 6.1 GA2 has a issue with (LPS-29103) the deployment manager moving the S
 https://github.com/openfeed/AjaxQuotePortlet/tree/master/liferay_6.1_GA2_post_deployment_fix
 
 
-<code>
+<!-- 
 <listener>
 	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 </listener>
@@ -65,10 +65,11 @@ https://github.com/openfeed/AjaxQuotePortlet/tree/master/liferay_6.1_GA2_post_de
 <listener>
 	<listener-class>com.liferay.portal.kernel.servlet.SerializableSessionAttributeListener</listener-class>
 </listener>
-</code>
+ -->
 
 When deploying to WAS. Make sure that before you run a maven build you edit "ajaxquote-v0.91\ajaxquote_war\WebContent\WEB-INF\web.xml"
 
+<code>
  <!-- 
 	<servlet>
 		<servlet-name>PortalEquitiesServlet</servlet-name>
@@ -81,7 +82,7 @@ When deploying to WAS. Make sure that before you run a maven build you edit "aja
 		<url-pattern>/portale/*</url-pattern>
 	</servlet-mapping>
  -->
- 
+ </code>
 remove these comments.
 
 TRUNCATE TABLE wdgt_user;
