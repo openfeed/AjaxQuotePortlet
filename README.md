@@ -1,7 +1,10 @@
 AjaxQuote Portlet
 ================
 
-A update the great LifeRay Stock Plugin Portlet
+A update the great LifeRay Stock Plugin Portlet!
+
+Real-time market quote data is streamed to one or more portlets on the page by Ajax and JavaScript technology. Watch the tickers move in real-time on the screen (with no stress on the back-end; all client side services)
+
 
 
 New in v0.93 is the maven build option for creating a JPA 1.0 or 2.0 persistence xml and the corresponding JPA Hibernate provider classes version 3.3.2.GA (JPA 1.0) or 4.2.2.Final (JPA 2.0).
