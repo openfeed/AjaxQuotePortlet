@@ -62,11 +62,10 @@ https://github.com/openfeed/AjaxQuotePortlet/tree/master/liferay_6.1_GA2_post_de
 		<listener-class>com.liferay.portal.kernel.servlet.SerializableSessionAttributeListener</listener-class>
 	</listener>
 
+WebSphere Application Server (Embedded Portal)
+============================
+Vanilla WebSphere Application Server test portal harness support can be configured in the web.xml. Make sure that before you run a maven build you edit <code>"\ajaxquote_war\WebContent\WEB-INF\web.xml"</code> by uncommenting the PortalEquitiesServlet servlet xml instructions.
 
-When deploying to WAS. Make sure that before you run a maven build you edit "ajaxquote-v0.91\ajaxquote_war\WebContent\WEB-INF\web.xml"
-
-<code>
- <!-- 
 	<servlet>
 		<servlet-name>PortalEquitiesServlet</servlet-name>
 		<jsp-file>/WEB-INF/jsp/portal/portal_equities.jsp</jsp-file>
@@ -77,9 +76,6 @@ When deploying to WAS. Make sure that before you run a maven build you edit "aja
 		<servlet-name>PortalEquitiesServlet</servlet-name>
 		<url-pattern>/portale/*</url-pattern>
 	</servlet-mapping>
- -->
- </code>
-remove these comments.
 
 <code>
 TRUNCATE TABLE wdgt_user;
