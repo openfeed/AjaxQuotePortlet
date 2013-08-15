@@ -41,7 +41,8 @@ https://github.com/openfeed/AjaxQuotePortlet/blob/master/ajaxquote_jar/pom.xml
 
 Database Instructions
 ========================
-Initial SQL scripts are provided to load the popular company and market symbols for key stroke ahead find company functionality; into the openfeed schema. 
+Initial SQL scripts are provided to load the popular company and market symbols for key stroke ahead find company functionality; into the openfeed schema.
+<br>
 https://github.com/openfeed/AjaxQuotePortlet/tree/master/sql
 
 
