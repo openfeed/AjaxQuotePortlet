@@ -46,18 +46,22 @@ Initial SQL scripts are provided to load the popular company and market symbols 
 https://github.com/openfeed/AjaxQuotePortlet/tree/master/sql
 
 
+LifeRay 6.1 GA2 Support
+=======================
+LifeRay 6.1 GA2 has a issue with (LPS-29103) the deployment manager moving the Spring context listner directive deep down in the bottom of the post deployed web.xml. Use the following web.xml script post deployment for the portlet to function:
+<br>
+https://github.com/openfeed/AjaxQuotePortlet/tree/master/liferay_6.1_GA2_post_deployment_fix
 
-Vanilla WebSphere Application Server test portal harness can be configured by uncommenting the PortalEquitiesServlet servlet in the web.xml
-
-After deployment to liferay "liferay-portal-6.1.1-ce-ga2\tomcat-7.0.27\webapps\ajaxquote_war\WEB-INF\web.xml" must be edited. Listeners supposed be in the right sequence:
 
 <code>
 <listener>
 	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 </listener>
+<br>
 <listener>
 	<listener-class>com.liferay.portal.kernel.servlet.PluginContextListener</listener-class>
 </listener>
+<br>
 <listener>
 	<listener-class>com.liferay.portal.kernel.servlet.SerializableSessionAttributeListener</listener-class>
 </listener>
