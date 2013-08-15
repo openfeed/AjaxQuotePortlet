@@ -1,6 +1,6 @@
 <%@ include file="/WEB-INF/jsp/include.jsp"%>
 <%@ page session="false" %>
-<h1>Equity</h1>
+<%-- <h1>Equity</h1> --%>
 <portlet:defineObjects/>
 <link rel="stylesheet" type="text/css" href="<%=renderResponse.encodeURL(renderRequest.getContextPath())+"/resources/css/ajaxquote.css"%>" />
 <script src="<%=renderResponse.encodeURL(renderRequest.getContextPath())+"/resources/js/ajaxquote.js"%>"></script>
