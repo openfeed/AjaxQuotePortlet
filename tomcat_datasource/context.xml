@@ -33,7 +33,7 @@
     -->
 
 	
-	<Resource name="jdbc/openfeed" auth="Container"
+	<Resource name="jdbc/openfeedaq" auth="Container"
 			type="javax.sql.DataSource"
 			username="openfeedusr" password="password"
 		
