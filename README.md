@@ -81,6 +81,12 @@ TRUNCATE TABLE wdgt_user_ui;<br>
 TRUNCATE TABLE wdgt_user_ui_market_entity;<br>
 </code>
 
+<code>
+INSERT INTO equity_entity (symbol, exchange, company_name, industry) VALUES
+('.IXIC', 'INDEXNDQ', 'NASDAQ Composite', 'All'),
+('ACN', 'NYSE', 'Accenture Plc', 'Business Support Services - NEC');
+</code>
+
 WebSphere Application Server (Embedded Portal)
 ============================
 Vanilla WebSphere Application Server test portal harness support can be configured in the web.xml. Make sure that before you run a maven build you edit <code>\ajaxquote_war\WebContent\WEB-INF\web.xml</code> by uncommenting the PortalEquitiesServlet servlet xml instructions.
