@@ -555,16 +555,16 @@ CREATE TABLE IF NOT EXISTS `wdgt_market_entity` (
 --
 -- Table structure for table `wdgt_market_entity`
 --
-DROP TABLE IF EXISTS `wdgt_market_entity`;
-INSERT INTO `wdgt_market_entity` (`entity_id`, `type`, `symbol`, `exchange`, `company_name`) VALUES
-(40, 'EQTY', 'AMP', 'NYSE', 'Ameriprise Financial'),
-(41, 'EQTY', 'BNI', 'NYSE', 'Burlington Northern Santa Fe'),
-(42, 'EQTY', 'BMY', 'NYSE', 'Bristol Myers Squibb'),
-(43, 'EQTY', '.DJI', 'INDEXDJX', 'Dow Jones Industrial Average'),
-(44, 'EQTY', '.INX', 'INDEXSP', 'S&P 500'),
-(45, 'EQTY', 'BEN', 'NYSE', 'Franklin Resources'),
-(46, 'EQTY', 'AMZN', 'NASDAQ', 'Amazon.com'),
-(47, 'EQTY', 'AEP', 'NYSE', 'American Electric Power');
+-- DROP TABLE IF EXISTS `wdgt_market_entity`;
+-- INSERT INTO `wdgt_market_entity` (`entity_id`, `type`, `symbol`, `exchange`, `company_name`) VALUES
+-- (40, 'EQTY', 'AMP', 'NYSE', 'Ameriprise Financial'),
+-- (41, 'EQTY', 'BNI', 'NYSE', 'Burlington Northern Santa Fe'),
+-- (42, 'EQTY', 'BMY', 'NYSE', 'Bristol Myers Squibb'),
+-- (43, 'EQTY', '.DJI', 'INDEXDJX', 'Dow Jones Industrial Average'),
+-- (44, 'EQTY', '.INX', 'INDEXSP', 'S&P 500'),
+-- (45, 'EQTY', 'BEN', 'NYSE', 'Franklin Resources'),
+-- (46, 'EQTY', 'AMZN', 'NASDAQ', 'Amazon.com'),
+-- (47, 'EQTY', 'AEP', 'NYSE', 'American Electric Power');
 
 -- --------------------------------------------------------
 
