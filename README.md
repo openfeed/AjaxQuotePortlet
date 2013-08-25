@@ -6,10 +6,15 @@ An update to the great LifeRay Stock Plugin Portlet!
 Real-time market quote data is streamed to one or more portlets on the page by Ajax and JavaScript technology. Watch the tickers move in real-time on the screen (with no stress on the back-end; all client side services).
 
 Features:
+<br>
 Quote data is updated on the page in real-time
+<br>
 Support Annoymous and Personalized portlets with different portfolios
+<br>
 Multiple Instance Portlets on the same page
+<br>
 Support JPA 1.0 and 2.0 persistance units and hibernate libraries with maven profile build switches
+<br>
 There are four portlets to choose from; two sizes and two types; session based personalized (AjaxQuote) - Non-logged in or public page (Default) 
 
 Build Instructions
