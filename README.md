@@ -3,7 +3,7 @@ AjaxQuote Portlet
 
 An update to the great LifeRay Stock Plugin Portlet!
 
-Real-time market quote data is streamed to one or more portlets on the page by Ajax and JavaScript technology. Watch the tickers move in real-time on the screen (with no stress on the back-end; all client side services)
+Real-time market quote data is streamed to one or more portlets on the page by Ajax and JavaScript technology. Watch the tickers move in real-time on the screen (with no stress on the back-end; all client side services).
 
 Features:
 Quote data is updated on the page in real-time
