@@ -43,6 +43,8 @@ Install Instructions
 4. Deploy to either LifeRay Portal bundle or IBM WebSphere Portal servers
 5. Place one or more AjaxQuote portlets on either logged in pages or anonymous pages using the corresponding AjaqQuote portlet types (anonymous, miniature)
 <br>
+6. Go into Edit Mode and Personalize the Portlet (enter several stock symbols and indices .DJI, AAPL, as example)
+<br>
 
 Database Instructions
 ========================
